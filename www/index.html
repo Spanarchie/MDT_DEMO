@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="">
+  <head>
+    <meta charset="utf-8">
+    <title>MPS_RD</title>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./js/pc_cc.js"></script>
+    <script type="text/javascript" src="./js/mapping.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/pc_cc.css" media="screen" />
+    <!-- Demo Styles -->
+    <link href="css/demo.css" rel="stylesheet">
+
+    <!-- Modal Styles -->
+    <link href="css/modal.css" rel="stylesheet">
+  </head>
+
+
+  <body onload="initialize()">
+    <div class="container">
+      <!-- <header id="masthead"> changed to <div id="masthead">: IE 7-8 hack for background image missing if <header> or <section> -->
+        <div id="mastTitle">
+        <a href="#modal">getRequest</a>
+        <a href="#modal2"><img src="./images/fight-fist.png"></a>
+        <a href="#modal3"><img src="./images/red-warning-signicon.jpg"></a>
+        </div><!-- </header> -->
+<div id="info">
+      <div id="map-canvas" style="width: 100%;float: left;"> </div>
+</div>
+
+
+<div id="modal">
+    <div class="modal-content">
+      <div class="header">
+        <h2>Assistance Required :</h2>
+      </div>
+      <div class="copy">
+        <p>Volience against the person @ 170 Kennington Lane.</p><br>
+        <p>Safety warning flaged.</p>
+      </div>
+      <div class="cf footer">
+        <a href="#" onclick="Route()" class="btn">Respond</a>
+        <a href="#" onclick="DispLoc()" class="btn">Stand Down</a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+
+
+  <div id="modal2">
+    <div class="modal-content">
+      <div class="header">
+        <h2>Incident Details :</h2>
+      </div>
+      <div class="copy">
+        <p>This will contain the data from C&C</p>
+      </div>
+      <div class="cf footer">
+        <a href="#" class="btn">Close</a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+
+  <div id="modal3">
+    <div class="modal-content">
+      <div class="header">
+        <h2>Officer Safety Details :</h2>
+      </div>
+      <div class="copy">
+        <p>This will contain the data pertaining to officer safety</p>
+      </div>
+      <div class="cf footer">
+        <a href="#" class="btn">Close</a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+
+
+</div>
+     <div id= "footer" ></div>
+    <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" src="./js/angular-local-storage.js"></script>
+  </body>
+</html>
